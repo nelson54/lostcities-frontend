@@ -1,10 +1,10 @@
 <template>
-  <router-view class="view"></router-view>
+  <div>
+    <router-view class="view"></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App"
 };

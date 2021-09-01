@@ -37,6 +37,6 @@ let component = {}
 export default component
 
 export let meta = {
-    layout: component
+    layout: "application-view"
 }
 </script>

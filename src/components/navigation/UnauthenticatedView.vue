@@ -13,6 +13,6 @@ let component = {}
 export default component
 
 export let meta = {
-    layout: component
+    layout: "unauthenticated-view"
 }
 </script>
