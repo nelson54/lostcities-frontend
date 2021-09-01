@@ -4,8 +4,9 @@ import App from "./App.vue";
 
 Vue.config.productionTip = false;
 
-configureRouter(Vue);
+let router = configureRouter(Vue);
 
 new Vue({
+  router,
   render: (h) => h(App)
 }).$mount("#app");

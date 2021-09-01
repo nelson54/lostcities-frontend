@@ -5,7 +5,7 @@ import UnauthenticatedView from "./components/navigation/UnauthenticatedView"
 
 import Login from "./components/views/Login";
 
-export default function configure(vue) {
+export default function configureRouter(vue) {
   vue.use(VueRouter);
 
   vue.component('application-view', ApplicationView)
@@ -17,7 +17,7 @@ export default function configure(vue) {
   const Unicode = { template: '<div>unicode</div>' }
   const Query = { template: '<div>query: "{{ $route.params.q }}"</div>' }
 
-  const router = new VueRouter({
+  return new VueRouter({
     mode: "history",
     //base: __dirname,
     routes: [
