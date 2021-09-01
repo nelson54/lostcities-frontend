@@ -1,15 +1,12 @@
 <template>
   <router-view class="view"></router-view>
-</template
+</template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
 
 export default {
-  name: "App",
-  components: {
-    HelloWorld
-  }
+  name: "App"
 };
 </script>
 
