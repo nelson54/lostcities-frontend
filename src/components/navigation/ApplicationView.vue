@@ -25,7 +25,9 @@
     <pre id="counter">{{ n }}</pre>
     <pre id="query-t">{{ $route.query.t }}</pre>
     <pre id="hash">{{ $route.hash }}</pre>
-    <router-view class="view"></router-view>
+    <div>
+      <slot />
+    </div>
   </div>
 </template>
 

@@ -1,4 +1,6 @@
-
+<template>
+  <router-view class="view"></router-view>
+</template
 
 <script>
 import HelloWorld from "./components/HelloWorld";

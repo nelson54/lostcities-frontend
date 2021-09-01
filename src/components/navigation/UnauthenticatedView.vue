@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <h1>Not authenticated</h1>
-        <router-view class="view"></router-view>
+        <div>
+          <slot />
+        </div>
     </div>
 </template>
 
