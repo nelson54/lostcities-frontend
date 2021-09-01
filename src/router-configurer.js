@@ -1,14 +1,15 @@
 import VueRouter from "vue-router";
 
-import { meta as applicationViewLayout } from "./components/navigation/ApplicationView"
-import { meta as unauthenticatedViewLayout } from "./components/navigation/UnauthenticatedView"
+import {ApplicationView, meta as applicationViewLayout } from "./components/navigation/ApplicationView"
+import {UnauthenticatedView, meta as unauthenticatedViewLayout } from "./components/navigation/UnauthenticatedView"
 
 import Login from "./components/views/Login";
 
 export default function configure(vue) {
   vue.use(VueRouter);
 
-
+  vue.component('application-view', ApplicationView)
+  vue.component('unauthenticated-view', UnauthenticatedView)
 
   // 2. Define route components
   const Home = { template: '<div>home</div>' }
