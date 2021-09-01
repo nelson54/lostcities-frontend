@@ -10,7 +10,7 @@ let component = {}
 
 export default component
 
-export let meta {
+export let meta = {
     layout: component
 }
 </script>
