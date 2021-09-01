@@ -8,11 +8,5 @@
 </template>
 
 <script>
-let component = {}
-
-export default component
-
-export let meta = {
-    layout: "unauthenticated-view"
-}
+export default {}
 </script>

@@ -32,11 +32,5 @@
 </template>
 
 <script>
-let component = {}
-
-export default component
-
-export let meta = {
-    layout: "application-view"
-}
+export default {}
 </script>

@@ -1,7 +1,7 @@
 import VueRouter from "vue-router";
 
-import {ApplicationView, meta as applicationViewLayout } from "./components/navigation/ApplicationView"
-import {UnauthenticatedView, meta as unauthenticatedViewLayout } from "./components/navigation/UnauthenticatedView"
+import ApplicationView from "./components/navigation/ApplicationView"
+import UnauthenticatedView from "./components/navigation/UnauthenticatedView"
 
 import Login from "./components/views/Login";
 
@@ -21,8 +21,16 @@ export default function configure(vue) {
     mode: "history",
     //base: __dirname,
     routes: [
-      { path: "/", component: Home, meta: applicationViewLayout },
-      { path: "/login", component: Login, meta: unauthenticatedViewLayout },
+      { 
+        path: "/", 
+        component: Home, 
+        meta: { layout : 'application-view'}
+      },
+      { 
+        path: "/login", 
+        component: Login, 
+        meta: { layout : 'unauthenticated-view'} 
+      },
       { path: "/bar", component: Bar },
       { path: encodeURI("/é"), component: Unicode },
       { path: "/query/:q", component: Query }
