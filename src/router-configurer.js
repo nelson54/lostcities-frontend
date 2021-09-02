@@ -2,6 +2,7 @@ import VueRouter from "vue-router";
 
 import ApplicationView from "./components/navigation/ApplicationView"
 import UnauthenticatedView from "./components/navigation/UnauthenticatedView"
+import Register from "./components/register/Register"
 
 import Login from "./components/login/Login";
 
@@ -29,6 +30,11 @@ export default function configureRouter(vue) {
       { 
         path: "/login", 
         component: Login, 
+        meta: { layout : 'unauthenticated-view'} 
+      },
+      { 
+        path: "/register", 
+        component: Register, 
         meta: { layout : 'unauthenticated-view'} 
       },
       { path: "/bar", component: Bar },

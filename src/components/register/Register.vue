@@ -1,19 +1,22 @@
 <template>
-
   <b-form>
     <b-form-group label="Login" label-for="login">
       <b-form-input id="login" v-model="login"></b-form-input>
     </b-form-group>
+    <b-form-group label="Email" label-for="email">
+      <b-form-input id="email" v-model="email"></b-form-input>
+    </b-form-group>
+    <b-form-group label="First Name" label-for="first-name">
+      <b-form-input id="first-name" v-model="firstName"></b-form-input>
+    </b-form-group>
+    <b-form-group label="Last Name" label-for="last-name">
+      <b-form-input id="last-name" v-model="lastName"></b-form-input>
+    </b-form-group>
     <b-form-group label="Password" label-for="password">
       <b-form-input type="password" id="password"></b-form-input>
     </b-form-group>
-    <b-form-group label="Remember Me" label-for="remember-me">
-      <b-form-checkbox v-model="rememberMe" id="remember-me"></b-form-checkbox>
-    </b-form-group>
     <b-button variant="outline-primary">Login</b-button>
-    <p>Don't have an account? <router-link to="/register">Register</router-link></p>
   </b-form>
-
 </template>
 
 <script>
@@ -23,8 +26,10 @@ export default {
   data: function () {
     return {
       login: "",
-      password: "",
-      rememberMe: false
+      email: "",
+      firstName: "",
+      lastName: "",
+      password: ""
     }
   }
 };
