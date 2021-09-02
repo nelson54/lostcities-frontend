@@ -1,9 +1,35 @@
 <template>
-    <b-container class="bg-light text-dark border">
-        <slot />
+  <div>
+    <b-button
+      variant="outline-dark"
+      class="position-absolute top-0 start-0 ml-3"
+      v-if="showBack()"
+      v-on:click="back()"
+    >
+      Back
+    </b-button>
+    <b-container id="main" class="bg-light text-dark border my-3 py-3 rounded">
+      <slot />
     </b-container>
+  </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    showBack() {
+      return this.$route.fullPath !== "/";
+    },
+    back() {
+      console.dir(this.$route);
+      this.$router.go(-1);
+    },
+  },
+};
 </script>
+
+<style>
+#main {
+  max-width: 460px;
+}
+</style>
