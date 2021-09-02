@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import LoginService from "./login-service";
+import AccountsService from "./login-service";
 export default {
   name: "login",
   data: function () {
