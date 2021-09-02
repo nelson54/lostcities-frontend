@@ -3,7 +3,7 @@ export default class LoginService {
 
     }
 
-    login(login, password, rememberMe) {
+    async login(login, password, rememberMe) {
         // Default options are marked with *
         const response = await fetch(_fullPath(), {
             method: 'POST', 
@@ -16,7 +16,7 @@ export default class LoginService {
             referrerPolicy: 'no-referrer',
             body: JSON.stringify({}) // body data type must match "Content-Type" header
         });
-        return response.json({login, password, rememberMe}); 
+        return response.json(); 
     }
 
     _fullPath(path="") {
