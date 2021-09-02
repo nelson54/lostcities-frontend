@@ -3,3 +3,8 @@
         <h1>Login</h1>
     </div>
 </template>
+
+<script>
+import LoginService from "./login-service";
+
+</script>
