@@ -31,5 +31,7 @@ export default {
 <style>
 #main {
   max-width: 460px;
+  position: relative;
+  top: 5em;
 }
 </style>
